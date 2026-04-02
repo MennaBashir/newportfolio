@@ -142,6 +142,7 @@ export const PROJECTS = [
       "Framer Motion",
       "React Hook Form",
       "Zod Validation",
+      "React Query",
       "SEO Optimization",
     ],
     featured: false,
@@ -355,39 +356,6 @@ export const EXPERIENCES = [
     ],
     tech: ["TypeScript", "React", "Problem Solving", "Git", "GitHub"],
     color: "amber",
-  },
-];
-
-export const ACHIEVEMENTS = [
-  {
-    id: "nasa",
-    type: "Award",
-    title: "NASA Space Apps Challenge",
-    subtitle: "2025 Winner",
-    description:
-      "Developed an intelligent, weather-aware activity assistant that helps users plan outdoor activities safely using real-time API evaluation and AI-powered suggestions for smarter scheduling.",
-    tags: ["React", "AI", "Weather APIs", "UX"],
-    color: "sky",
-  },
-  {
-    id: "gitlab",
-    type: "Open Source",
-    title: "GitLab",
-    subtitle: "Core Contributor",
-    description:
-      "Contributed critical UI fixes to the GitLab Web IDE (VS Code version) that improved accessibility and resolved keyboard navigation bugs affecting over 1 million daily active users.",
-    tags: ["Vue.js", "Accessibility", "VS Code API"],
-    color: "orange",
-  },
-  {
-    id: "aboutcode",
-    type: "Open Source",
-    title: "AboutCode",
-    subtitle: "Core Contributor",
-    description:
-      "Engineered significant frontend performance optimizations for the ScanCode Workbench UI and implemented new filtering capabilities for improved developer workflow and experience.",
-    tags: ["React", "Electron", "Performance"],
-    color: "emerald",
   },
 ];
 

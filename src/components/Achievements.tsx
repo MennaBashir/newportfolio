@@ -185,7 +185,7 @@ const achievements: Achievement[] = [
       "Sticky Edit button for wiki pages: Implemented a feature that keeps the 'Edit' button visible on GitLab wiki pages, improving accessibility and user experience.",
     techTags: ["Vue.js", "Accessibility", "UI/UX"],
     accentColor: "#f97316",
-    status: { label: "Progress", color: "#f97316" },
+    status: { label: "Merged", color: "#a855f7" },
     buttons: [
       {
         label: "View Merge Request",
