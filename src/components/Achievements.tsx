@@ -201,7 +201,7 @@ const achievements: Achievement[] = [
     tag: "Open Source Contributor",
     description:
       "Implemented Dark Mode for AboutCode website, enhancing user experience . The feature was merged in another PR and is now live, receiving positive feedback from the community.",
-    techTags: ["React",  "Dark Mode", "UI/UX"],
+    techTags: ["JavaScript",  "Dark Mode", "UI/UX"],
     accentColor: "#3b82f6",
     status: { label: "Merged", color: "#a855f7" },
     buttons: [

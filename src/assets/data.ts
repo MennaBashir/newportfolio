@@ -137,7 +137,7 @@ export const PROJECTS = [
       "A modern website for Jawamk, a company specializing in graphic design, digital marketing and web development, site showcasing their projects and services, a blog for news and articles, an about us section detailing company , and a testimonials section displaying customer reviews and feedback.",
     category: "React/Next.js",
     tech: [
-      "React",
+      "Next.js",
       "Shadcn/UI",
       "Framer Motion",
       "React Hook Form",
