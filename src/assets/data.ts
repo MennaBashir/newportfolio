@@ -10,6 +10,8 @@ export const NAV_ITEMS = [
 ] as const;
 
 export const TYPING_WORDS = ["Fast Mobile Apps", "Smooth Web UIs"];
+let restMonths=new Date().getMonth() - new Date("2025-02-01").getMonth()
+let restYears=new Date().getFullYear() - new Date("2025-02-01").getFullYear();
 
 export const HERO_BADGES = [
   "B.Sc. Information Technology",
@@ -126,7 +128,7 @@ export const PROJECTS = [
       "AI Integration",
     ],
     featured: true,
-    status: "in-progress" as const,
+    status: "featured" as const,
     image: ASSETS.bosla,
     github: "not available",
     demo: "https://front.bosla.almiraj.xyz/",
@@ -309,7 +311,7 @@ export const EXPERIENCES = [
     role: "Frontend Developer",
     company: "Wladet Helm",
     period: "Feb 2025 -- Present",
-    duration: "1 yr 2 mo",
+    duration: `${restYears} yr ${restMonths} mo `,
     type: "Full-time",
     description: [
       "Collaborating with cross-functional teams to architect and develop a scalable, high-performance web application.",
