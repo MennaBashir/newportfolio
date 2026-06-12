@@ -8,7 +8,8 @@ import {
   Briefcase,
   Loader2,
 } from "lucide-react";
-import { PROJECTS } from "../assets/data";
+import { resolveImage } from "../assets/data";
+import { useContent } from "../store/ContentStore";
 import SectionHeading from "./SectionHeading";
 
 const FILTERS = ["All", "React/Next.js", "React Native"] as const;
@@ -57,9 +58,11 @@ const STATUS_CONFIG: Record<
 
 export default function Projects() {
   const [filter, setFilter] = useState<string>("All");
+  const { content } = useContent();
+  const projects = content.projects;
 
   const filtered =
-    filter === "All" ? PROJECTS : PROJECTS.filter((p) => p.category === filter);
+    filter === "All" ? projects : projects.filter((p) => p.category === filter);
 
   return (
     <section className="py-24 relative overflow-hidden">
@@ -132,7 +135,7 @@ export default function Projects() {
                 >
                   <div className="relative aspect-video overflow-hidden bg-zinc-900/60">
                     <img
-                      src={project.image}
+                      src={resolveImage(project.image)}
                       alt={project.title}
                       className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700"
                       loading="lazy"

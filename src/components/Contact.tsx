@@ -20,7 +20,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import emailjs from "@emailjs/browser";
 import toast, { Toaster } from "react-hot-toast";
-import { SOCIAL_LINKS } from "../assets/data";
+import { useContent } from "../store/ContentStore";
 import SectionHeading from "./SectionHeading";
 
 const socialIcons: Record<string, typeof Code2> = {
@@ -318,6 +318,7 @@ function inputCls(hasError: boolean) {
 
 export default function Contact() {
   const [showAnim, setShowAnim] = useState(false);
+  const { content } = useContent();
 
   const {
     register,
@@ -417,7 +418,7 @@ export default function Contact() {
                 Connect Directly
               </h3>
               <div className="space-y-2">
-                {SOCIAL_LINKS.map((link) => {
+                {content.socialLinks.map((link) => {
                   const Icon = socialIcons[link.platform] || Mail;
                   return (
                     <MagneticLink

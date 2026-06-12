@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Briefcase, Calendar, Clock, Building2 } from "lucide-react";
-import { EXPERIENCES } from "../assets/data";
+import { computeDuration } from "../assets/data";
+import { useContent } from "../store/ContentStore";
 import SectionHeading from "./SectionHeading";
 
 const colorMap: Record<string, { border: string; bg: string; text: string; dot: string; leftBorder: string }> = {
@@ -35,6 +36,7 @@ const colorMap: Record<string, { border: string; bg: string; text: string; dot: 
 };
 
 export default function Experience() {
+  const { content } = useContent();
   return (
     <section className="py-24 relative">
       <div className="max-w-3xl mx-auto px-6">
@@ -48,7 +50,7 @@ export default function Experience() {
           <div className="absolute left-6 top-0 bottom-0 w-px bg-gradient-to-b from-sky-500/30 via-slate-700/50 to-transparent" />
 
           <div className="space-y-8">
-            {EXPERIENCES.map((exp, i) => {
+            {content.experiences.map((exp, i) => {
               const colors = colorMap[exp.color] || colorMap.sky;
               return (
                 <motion.div
@@ -86,7 +88,9 @@ export default function Experience() {
                         </div>
                         <div className="flex items-center gap-1.5 text-xs text-slate-500">
                           <Clock className="w-3.5 h-3.5" />
-                          {exp.duration}
+                          {exp.duration === "auto"
+                            ? computeDuration(exp.period)
+                            : exp.duration}
                         </div>
                         <span className={`inline-flex items-center gap-1 px-2 py-0.5 rounded-full ${colors.bg} border ${colors.border} text-xs ${colors.text}`}>
                           <Briefcase className="w-3 h-3" />

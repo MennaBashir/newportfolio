@@ -1,6 +1,7 @@
 import { useRef, useState } from "react";
 import { motion } from "framer-motion";
-import { TECH_GROUPS } from "../assets/data";
+import type { TechGroup } from "../assets/contentTypes";
+import { useContent } from "../store/ContentStore";
 import SectionHeading from "./SectionHeading";
 import TechIcon from "./TechIcon";
 
@@ -8,7 +9,7 @@ function DomainCard({
   group,
   index,
 }: {
-  group: (typeof TECH_GROUPS)[number];
+  group: TechGroup;
   index: number;
 }) {
   const ref = useRef<HTMLDivElement>(null);
@@ -110,7 +111,7 @@ function DomainCard({
 }
 
 export default function TechStack() {
-
+  const { content } = useContent();
   return (
     <section className="pt-24 relative overflow-hidden">
       <div className="relative z-10 max-w-6xl mx-auto px-6">
@@ -120,7 +121,7 @@ export default function TechStack() {
           description="A showcase of the technologies and tools I have experience with."
         />
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 mb-20">
-          {TECH_GROUPS.map((group, i) => (
+          {content.techGroups.map((group, i) => (
             <DomainCard key={group.id} group={group} index={i} />
           ))}
         </div>

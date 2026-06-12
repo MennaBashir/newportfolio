@@ -9,6 +9,8 @@ import Experience from "./components/Experience";
 import Achievements from "./components/Achievements";
 import Contact from "./components/Contact";
 import InteractiveCursor from "./components/InteractiveCursor";
+import AdminPage from "./admin/AdminPage";
+import { ContentProvider } from "./store/ContentStore";
 
 const pageVariants = {
   initial: { opacity: 0, y: 24 },
@@ -87,6 +89,14 @@ function AnimatedRoutes() {
             </Page>
           }
         />
+        <Route
+          path="/admin"
+          element={
+            <Page>
+              <AdminPage />
+            </Page>
+          }
+        />
       </Routes>
     </AnimatePresence>
   );
@@ -94,15 +104,17 @@ function AnimatedRoutes() {
 
 export default function App() {
   return (
-    <BrowserRouter>
-      <div className="min-h-screen text-white font-sans">
-        <GlobalBackground />
-        <Navbar />
-        <main>
-          <AnimatedRoutes />
-        </main>
-        <InteractiveCursor />
-      </div>
-    </BrowserRouter>
+    <ContentProvider>
+      <BrowserRouter>
+        <div className="min-h-screen text-white font-sans">
+          <GlobalBackground />
+          <Navbar />
+          <main>
+            <AnimatedRoutes />
+          </main>
+          <InteractiveCursor />
+        </div>
+      </BrowserRouter>
+    </ContentProvider>
   );
 }
