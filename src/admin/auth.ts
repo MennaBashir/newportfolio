@@ -1,5 +1,5 @@
 const CREDENTIALS_HASH =
-  "40473ecfba2181dbf379a2f01c21d15d9e4708475c292f80a470fd10657312af";
+  "77b9724755ea5ac4a9ebd47c0a56eaf2f60d00b5c01c7a61449c38227e5f0504";
 
 const SESSION_KEY = "portfolio-admin-session";
 
