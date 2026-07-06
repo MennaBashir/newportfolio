@@ -54,6 +54,13 @@ const STATUS_CONFIG: Record<
     icon: Loader2,
     pulse: true,
   },
+  "graduation-Project": {
+    label: "Graduation Project",
+    color: "#8b5cf6",
+    bgColor: "rgba(139,92,246,0.08)",
+    borderColor: "rgba(139,92,246,0.2)",
+    icon: Sparkles,
+  }
 };
 
 export default function Projects() {

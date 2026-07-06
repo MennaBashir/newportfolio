@@ -82,10 +82,27 @@
   ],
   "projects": [
     {
+      "title": "Sprintif AI",
+      "description": "SprintifAI is an enterprise productivity platform that turns every meeting into measurable business outcomes. It captures discussions, extracts decisions, assigns tasks with deadlines, and syncs everything to your team's calendar",
+      "category": "React/Next.js",
+      "tech": ["AI Integration", "React","VideoSDK","Zustand","React Query", "Tailwind CSS", "Framer Motion","GSAP"],
+      "featured": true,
+      "status": "graduation-Project",
+      "image": "sprintifAi",
+      "github": "https://github.com/MennaBashir/xCloud-frontend",
+      "demo": "https://x-cloud-frontend-2wj3.vercel.app/"
+    },
+    {
       "title": "Bosla",
       "description": "A cutting-edge AI-powered learning platform designed to revolutionize the way students approach programming education. Bosla leverages advanced machine learning algorithms to analyze individual learning styles, strengths, and weaknesses, providing personalized learning paths and resources tailored to each student's unique needs. With an intuitive interface and interactive features, Bosla empowers students to master programming concepts efficiently and effectively, fostering a deeper understanding and accelerating their learning journey.",
       "category": "React/Next.js",
-      "tech": ["React", "React Query", "Tailwind CSS", "Framer Motion", "AI Integration"],
+      "tech": [
+        "React",
+        "React Query",
+        "Tailwind CSS",
+        "Framer Motion",
+        "AI Integration"
+      ],
       "featured": true,
       "status": "featured",
       "image": "bosla",
@@ -96,7 +113,15 @@
       "title": "Jawamk",
       "description": "A modern website for Jawamk, a company specializing in graphic design, digital marketing and web development, site showcasing their projects and services, a blog for news and articles, an about us section detailing company , and a testimonials section displaying customer reviews and feedback.",
       "category": "React/Next.js",
-      "tech": ["Next.js", "Shadcn/UI", "Framer Motion", "React Hook Form", "Zod Validation", "React Query", "SEO Optimization"],
+      "tech": [
+        "Next.js",
+        "Shadcn/UI",
+        "Framer Motion",
+        "React Hook Form",
+        "Zod Validation",
+        "React Query",
+        "SEO Optimization"
+      ],
       "featured": false,
       "status": "freelance",
       "image": "free2",
@@ -107,7 +132,13 @@
       "title": "Skyra",
       "description": "An AI-powered weather assistant to help users plan outdoor activities safely using real-time API evaluation and AI-powered suggestions for smarter scheduling.",
       "category": "React/Next.js",
-      "tech": ["React", "TypeScript", "Tailwind CSS", "Framer Motion", "AI Integration"],
+      "tech": [
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Framer Motion",
+        "AI Integration"
+      ],
       "featured": true,
       "status": "featured",
       "image": "skyra",
@@ -148,25 +179,25 @@
       "demo": "https://matgaar.netlify.app/"
     },
     {
-      "title": "Sidra",
-      "description": "Application Sidra, a comprehensive Islamic app that offers a wide range of features to enhance the spiritual journey of its users. The app provides access to the Quran with translations and tafsir, a collection of authentic hadiths, a radio feature for listening to Islamic lectures and recitations, and a qibla direction tool to help users find the direction of prayer. With its user-friendly interface and rich content, Sidra aims to be a valuable resource for Muslims seeking knowledge and connection with their faith.",
-      "category": "React Native",
-      "tech": ["React Native", "Expo", "TypeScript", "Tailwind CSS"],
-      "featured": false,
-      "status": "in-progress",
-      "image": "sidra",
-      "github": "https://github.com/MennaBashir/sidra",
-      "demo": "not available"
-    },
-    {
-      "title": "News App",
-      "description": "A modern news application built with React Native and Expo, designed to provide users with a seamless and engaging news reading experience. The app features a clean and intuitive interface, allowing users to easily browse through various news categories, read articles, and stay updated with the latest headlines. With its responsive design and offline capabilities, this news app ensures that users can access their favorite news content anytime, anywhere.",
+      "title": "Finto App",
+      "description": "Finto App is designed to help users track their income and expenses, visualize their spending trends over time, and gain insights into their financial habits. The app features a user-friendly interface, allowing users to easily input transactions, categorize expenses, and view detailed reports and charts that provide a clear overview of their financial health. With its intuitive design and powerful analytics, Finto App empowers users to make informed financial decisions and achieve their budgeting goals.",
       "category": "React Native",
       "tech": ["React Native", "Expo", "TypeScript", "Tailwind CSS"],
       "featured": false,
       "status": "",
-      "image": "news",
-      "github": "https://github.com/MennaBashir/my-expo-app",
+      "image": "finto",
+      "github": "https://github.com/MennaBashir/expense-tracker",
+      "demo": "not available"
+    },
+    {
+      "title": "ELITE App",
+      "description": "ELITE App is a modern e-commerce mobile application designed to provide users with a seamless and engaging shopping experience. Built with React Native and Expo, the app features a sleek and intuitive interface that allows users to browse products, add items to their cart, and complete purchases with ease. With integrated payment gateways, personalized recommendations, and real-time order tracking, ELITE App empowers users to shop confidently and efficiently from the comfort of their mobile devices.",
+      "category": "React Native",
+      "tech": ["React Native", "Expo", "TypeScript", "Tailwind CSS"],
+      "featured": false,
+      "status": "in-progress",
+      "image": "elite",
+      "github": "https://github.com/MennaBashir/elite-app-rn",
       "demo": "not available"
     },
     {
@@ -247,7 +278,13 @@
         "Collaborating with cross-functional teams to architect and develop a scalable, high-performance web application.",
         "Participating in code reviews, agile ceremonies, and contributing to technical design discussions to continuously improve the codebase and development processes."
       ],
-      "tech": ["React", "ShadCN/UI", "Tailwind CSS", "React Query", "REST APIs"],
+      "tech": [
+        "React",
+        "ShadCN/UI",
+        "Tailwind CSS",
+        "React Query",
+        "REST APIs"
+      ],
       "color": "sky"
     },
     {

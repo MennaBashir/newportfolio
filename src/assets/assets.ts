@@ -8,11 +8,12 @@ import free1 from "./images/free1.png";
 import free2 from "./images/free2.png";
 import hosipital from "./images/hosipital.png";
 import port from "./images/port.png";
-import sidra from "./images/sidra.png";
+import finto from "./images/finto-app.png";
 import sirx from "./images/sirx.png";
 import skyra from "./images/skyra.png";
-import news from "./images/news.png";
+import elite from "./images/elite-app.png";
 import resume from "./images/Menna_Bashir_Frontend.pdf";
+import sprintifAi from "./images/sprintifAi.png";
 export const ASSETS = {
   account,
   bosla,
@@ -24,9 +25,10 @@ export const ASSETS = {
   free2,
   hosipital,
   port,
-  sidra,
+  finto,
   sirx,
   skyra,
-  news,
+  elite,
   resume,
+  sprintifAi,
 };
