@@ -15,7 +15,7 @@ import {
   SOCIAL_LINKS,
 } from "../assets/data";
 
-const STORAGE_KEY = "portfolio-content-v1";
+const STORAGE_KEY = "portfolio-content-v2";
 
 export function getDefaultContent(): PortfolioContent {
   return structuredClone({
