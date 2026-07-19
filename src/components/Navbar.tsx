@@ -57,10 +57,10 @@ export default function Navbar() {
         className="relative rounded-2xl border border-white/[0.07] bg-zinc-950/50 backdrop-blur-3xl"
         style={{
           boxShadow:
-            "0 8px_40px rgba(0,0,0,0.5), 0 0 80px -20px rgba(56,189,248,0.06), inset 0 1px 0 rgba(255,255,255,0.04)",
+            "0 8px 40px rgba(0,0,0,0.5), 0 0 80px -20px rgba(56,189,248,0.06), inset 0 1px 0 rgba(255,255,255,0.04)",
         }}
       >
-        <div className="px-7 py-3.5 flex items-center">
+        <div className="px-4 sm:px-7 py-3.5 flex items-center">
           <Link to="/" className="flex items-center gap-3 group shrink-0">
             <div className="relative w-10 h-10 flex items-center justify-center">
               <div
@@ -76,7 +76,7 @@ export default function Navbar() {
             </span>
           </Link>
 
-          <div className="hidden lg:flex items-center gap-0.5 ml-auto mr-8">
+          <div className="hidden lg:flex items-center gap-0.5 ml-auto mr-4 xl:mr-8">
             {NAV_ITEMS.map((item) => {
               const isActive = pathname === item.path;
               const isHovered = hovered === item.path;
@@ -87,7 +87,7 @@ export default function Navbar() {
                   to={item.path}
                   onMouseEnter={() => setHovered(item.path)}
                   onMouseLeave={() => setHovered(null)}
-                  className="relative px-4 py-2 text-[13px] font-medium tracking-wide"
+                  className="relative px-3 xl:px-4 py-2 text-[13px] font-medium tracking-wide"
                 >
                   <span
                     className={`relative z-10 transition-colors duration-300 ${
@@ -150,10 +150,13 @@ export default function Navbar() {
               }}
             >
               <Download className="w-3.5 h-3.5" />
-              <span>Download Resume</span>
+              <span className="hidden xl:inline">Download Resume</span>
+              <span className="xl:hidden">Resume</span>
             </a>
             <button
               onClick={() => setMobileOpen(!mobileOpen)}
+              aria-label={mobileOpen ? "Close menu" : "Open menu"}
+              aria-expanded={mobileOpen}
               className="lg:hidden p-2 text-slate-400 hover:text-white transition-colors duration-200"
             >
               {mobileOpen ? (
@@ -173,7 +176,7 @@ export default function Navbar() {
               exit={{ opacity: 0, height: 0 }}
               className="lg:hidden border-t border-white/[0.06] overflow-hidden"
             >
-              <div className="px-6 py-4 space-y-1">
+              <div className="px-6 py-4 space-y-1 max-h-[calc(100vh-8rem)] overflow-y-auto">
                 {NAV_ITEMS.map((item) => (
                   <Link
                     key={item.path}

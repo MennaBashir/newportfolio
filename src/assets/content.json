@@ -1,10 +1,13 @@
 {
-  "typingWords": ["Fast Mobile Apps", "Smooth Web UIs"],
+  "typingWords": [
+    "Fast Mobile Apps",
+    "Smooth Web UIs"
+  ],
   "heroBadges": [
     "B.Sc. Information Technology",
     "GitLab Contributor",
     "AboutCode Contributor",
-    "NASA Space Apps Winner"
+    "NASA Space Apps 2025"
   ],
   "techGroups": [
     {
@@ -14,8 +17,14 @@
       "accentColor": "#22d3ee",
       "gridArea": "main",
       "techs": [
-        { "name": "React", "color": "#61dafb" },
-        { "name": "Next.js", "color": "#FFFFFF" }
+        {
+          "name": "React",
+          "color": "#61dafb"
+        },
+        {
+          "name": "Next.js",
+          "color": "#FFFFFF"
+        }
       ]
     },
     {
@@ -25,9 +34,18 @@
       "accentColor": "#60a5fa",
       "gridArea": "languages",
       "techs": [
-        { "name": "TypeScript", "color": "#60a5fa" },
-        { "name": "JavaScript", "color": "#F7DF1E" },
-        { "name": "C++", "color": "#00599C" }
+        {
+          "name": "TypeScript",
+          "color": "#60a5fa"
+        },
+        {
+          "name": "JavaScript",
+          "color": "#F7DF1E"
+        },
+        {
+          "name": "C++",
+          "color": "#00599C"
+        }
       ]
     },
     {
@@ -37,8 +55,14 @@
       "accentColor": "#a78bfa",
       "gridArea": "mobile",
       "techs": [
-        { "name": "React Native", "color": "#61dafb" },
-        { "name": "Expo", "color": "#FFFFFF" }
+        {
+          "name": "React Native",
+          "color": "#61dafb"
+        },
+        {
+          "name": "Expo",
+          "color": "#FFFFFF"
+        }
       ]
     },
     {
@@ -48,9 +72,18 @@
       "accentColor": "#764ABC",
       "gridArea": "state",
       "techs": [
-        { "name": "Redux Toolkit", "color": "#764ABC" },
-        { "name": "Zustand", "color": "#a78bfa" },
-        { "name": "Recoil", "color": "#3578E5" }
+        {
+          "name": "Redux Toolkit",
+          "color": "#764ABC"
+        },
+        {
+          "name": "Zustand",
+          "color": "#a78bfa"
+        },
+        {
+          "name": "Recoil",
+          "color": "#3578E5"
+        }
       ]
     },
     {
@@ -60,10 +93,22 @@
       "accentColor": "#f472b6",
       "gridArea": "design",
       "techs": [
-        { "name": "Tailwind CSS", "color": "#38BDF8" },
-        { "name": "Framer Motion", "color": "#FF0055" },
-        { "name": "Shadcn/UI", "color": "#FFFFFF" },
-        { "name": "Material UI", "color": "#007FFF" }
+        {
+          "name": "Tailwind CSS",
+          "color": "#38BDF8"
+        },
+        {
+          "name": "Framer Motion",
+          "color": "#FF0055"
+        },
+        {
+          "name": "Shadcn/UI",
+          "color": "#FFFFFF"
+        },
+        {
+          "name": "Material UI",
+          "color": "#007FFF"
+        }
       ]
     },
     {
@@ -73,19 +118,40 @@
       "accentColor": "#f87171",
       "gridArea": "tools",
       "techs": [
-        { "name": "Docker", "color": "#2496ED" },
-        { "name": "Git", "color": "#F05032" },
-        { "name": "GitHub", "color": "#ffffff" },
-        { "name": "GitLab", "color": "#FC6D26" }
+        {
+          "name": "Docker",
+          "color": "#2496ED"
+        },
+        {
+          "name": "Git",
+          "color": "#F05032"
+        },
+        {
+          "name": "GitHub",
+          "color": "#ffffff"
+        },
+        {
+          "name": "GitLab",
+          "color": "#FC6D26"
+        }
       ]
     }
   ],
   "projects": [
     {
       "title": "Sprintif AI",
-      "description": "SprintifAI is an enterprise productivity platform that turns every meeting into measurable business outcomes. It captures discussions, extracts decisions, assigns tasks with deadlines, and syncs everything to your team's calendar",
+      "description": "SprintifAI is an enterprise productivity platform that turns every meeting into measurable business outcomes. It captures discussions, extracts decisions, assigns tasks with deadlines, and syncs everything to your team's calendar.",
       "category": "React/Next.js",
-      "tech": ["AI Integration", "React","VideoSDK","Zustand","React Query", "Tailwind CSS", "Framer Motion","GSAP"],
+      "tech": [
+        "AI Integration",
+        "React",
+        "VideoSDK",
+        "Zustand",
+        "React Query",
+        "Tailwind CSS",
+        "Framer Motion",
+        "GSAP"
+      ],
       "featured": true,
       "status": "graduation-Project",
       "image": "sprintifAi",
@@ -94,7 +160,7 @@
     },
     {
       "title": "Bosla",
-      "description": "A cutting-edge AI-powered learning platform designed to revolutionize the way students approach programming education. Bosla leverages advanced machine learning algorithms to analyze individual learning styles, strengths, and weaknesses, providing personalized learning paths and resources tailored to each student's unique needs. With an intuitive interface and interactive features, Bosla empowers students to master programming concepts efficiently and effectively, fostering a deeper understanding and accelerating their learning journey.",
+      "description": "An AI-powered learning platform that analyzes each student's learning style, strengths, and weaknesses to generate personalized programming learning paths. Interactive lessons and adaptive resources help students master concepts faster and more effectively.",
       "category": "React/Next.js",
       "tech": [
         "React",
@@ -111,7 +177,7 @@
     },
     {
       "title": "Jawamk",
-      "description": "A modern website for Jawamk, a company specializing in graphic design, digital marketing and web development, site showcasing their projects and services, a blog for news and articles, an about us section detailing company , and a testimonials section displaying customer reviews and feedback.",
+      "description": "Corporate website for Jawamk, a graphic design and digital marketing agency with offices across Saudi Arabia, UAE, Oman, and Egypt — featuring a bilingual (EN/AR) interface, project showcase, blog, and services pages.",
       "category": "React/Next.js",
       "tech": [
         "Next.js",
@@ -130,7 +196,7 @@
     },
     {
       "title": "Skyra",
-      "description": "An AI-powered weather assistant to help users plan outdoor activities safely using real-time API evaluation and AI-powered suggestions for smarter scheduling.",
+      "description": "NASA Space Apps 2025 project — an AI-powered weather assistant that evaluates real-time NASA data to help users plan outdoor activities safely, with smart suggestions for better scheduling.",
       "category": "React/Next.js",
       "tech": [
         "React",
@@ -149,7 +215,12 @@
       "title": "Mohdmimy",
       "description": "A modern website for a graphic designer, showcasing his work and services, to easily display his portfolio and attract potential clients.",
       "category": "React/Next.js",
-      "tech": ["React", "TypeScript", "Tailwind CSS", "SEO Optimization"],
+      "tech": [
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "SEO Optimization"
+      ],
       "featured": false,
       "status": "freelance",
       "image": "free1",
@@ -158,31 +229,47 @@
     },
     {
       "title": "Admin Dashboard",
-      "description": "A sleek and intuitive admin dashboard built with React and Tailwind CSS, designed to provide seamless data management and insightful analytics for businesses. The dashboard features a responsive layout, interactive charts, and customizable widgets, allowing administrators to efficiently monitor key performance indicators, manage user accounts, and visualize data trends in real-time. With its user-friendly interface and powerful functionality, this admin dashboard empowers businesses to make informed decisions and optimize their operations effectively.",
+      "description": "A sleek and intuitive admin dashboard built with React and Material UI, designed to provide seamless data management and insightful analytics for businesses. It features a responsive layout, interactive Nivo charts, a full calendar, and data grids, allowing administrators to efficiently monitor key performance indicators, manage user accounts, and visualize data trends in real-time.",
       "category": "React/Next.js",
-      "tech": ["React", "TypeScript", "Material UI", "Recharts"],
+      "tech": [
+        "React",
+        "TypeScript",
+        "Material UI",
+        "Nivo Charts",
+        "Sass"
+      ],
       "featured": false,
       "status": "featured",
       "image": "dash",
       "github": "https://github.com/MennaBashir/Admin-Dashboard",
-      "demo": "https://admin-dashboard-menna.netlify.app/"
+      "demo": "https://admin-dashboard-xi-two-42.vercel.app/"
     },
     {
-      "title": "Matger Electronics",
-      "description": "A modern website for Matger Electronics, a company specializing in selling electronic devices, site showcasing their products and services, a blog for news and articles, an about us section detailing company , and a testimonials section displaying customer reviews and feedback.",
+      "title": "Sirx",
+      "description": "A cryptocurrency news platform for Sirx featuring live market updates, a news blog, services overview, and customer testimonials.",
       "category": "React/Next.js",
-      "tech": ["React", "Shadcn/UI", "Framer Motion", "SEO Optimization"],
+      "tech": [
+        "React",
+        "JavaScript",
+        "Bootstrap",
+        "Redux Toolkit"
+      ],
       "featured": false,
       "status": "",
-      "image": "ecom1",
-      "github": "https://github.com/MennaBashir/ITI-Project",
-      "demo": "https://matgaar.netlify.app/"
+      "image": "sirx",
+      "github": "https://github.com/MennaBashir/Cryptocurrency",
+      "demo": "https://cryptocurrency-alpha-drab.vercel.app/"
     },
     {
       "title": "Finto App",
-      "description": "Finto App is designed to help users track their income and expenses, visualize their spending trends over time, and gain insights into their financial habits. The app features a user-friendly interface, allowing users to easily input transactions, categorize expenses, and view detailed reports and charts that provide a clear overview of their financial health. With its intuitive design and powerful analytics, Finto App empowers users to make informed financial decisions and achieve their budgeting goals.",
+      "description": "Finto App is designed to help users track their income and expenses, visualize their spending trends over time, and gain insights into their financial habits. It features a clean interface for logging transactions, categorizing expenses, and viewing detailed reports and charts that give a clear overview of financial health.",
       "category": "React Native",
-      "tech": ["React Native", "Expo", "TypeScript", "Tailwind CSS"],
+      "tech": [
+        "React Native",
+        "Expo",
+        "TypeScript",
+        "Tailwind CSS"
+      ],
       "featured": false,
       "status": "",
       "image": "finto",
@@ -191,9 +278,15 @@
     },
     {
       "title": "ELITE App",
-      "description": "ELITE App is a modern e-commerce mobile application designed to provide users with a seamless and engaging shopping experience. Built with React Native and Expo, the app features a sleek and intuitive interface that allows users to browse products, add items to their cart, and complete purchases with ease. With integrated payment gateways, personalized recommendations, and real-time order tracking, ELITE App empowers users to shop confidently and efficiently from the comfort of their mobile devices.",
+      "description": "A modern e-commerce mobile app built with React Native, Expo, and Supabase — featuring product browsing, cart management, secure authentication, and offline-ready local storage for a smooth shopping experience.",
       "category": "React Native",
-      "tech": ["React Native", "Expo", "TypeScript", "Tailwind CSS"],
+      "tech": [
+        "React Native",
+        "Expo",
+        "TypeScript",
+        "NativeWind",
+        "Supabase"
+      ],
       "featured": false,
       "status": "in-progress",
       "image": "elite",
@@ -202,9 +295,14 @@
     },
     {
       "title": "Old Portfolio",
-      "description": "My old portfolio website, built with React and Tailwind CSS, showcasing my projects and experience at that time.",
+      "description": "My old portfolio website, built with React, Sass and Framer Motion, showcasing my projects and experience at that time.",
       "category": "React/Next.js",
-      "tech": ["React", "Tailwind CSS"],
+      "tech": [
+        "React",
+        "TypeScript",
+        "Sass",
+        "Framer Motion"
+      ],
       "featured": false,
       "status": "",
       "image": "port",
@@ -212,59 +310,67 @@
       "demo": "https://mennabashir.github.io/Portfolio/"
     },
     {
-      "title": "Sirx",
-      "description": "A modern website for Sirx, a company specializing in cryptocurrency news and updates, site showcasing their services, a blog for news and articles, an about us section detailing company , and a testimonials section displaying customer reviews and feedback.",
+      "title": "Matger Electronics",
+      "description": "An electronics e-commerce site with a product catalog, store locator map, blog, and testimonials — built as an ITI team project with React, Material UI, and Redux Toolkit.",
       "category": "React/Next.js",
-      "tech": ["React", "JavaScript", "Bootstrap", "Cryptocurrency"],
+      "tech": [
+        "React",
+        "TypeScript",
+        "Material UI",
+        "Redux Toolkit",
+        "Leaflet"
+      ],
       "featured": false,
       "status": "",
-      "image": "sirx",
-      "github": "https://github.com/MennaBashir/Cryptocurrency",
-      "demo": "https://sirxmenna.netlify.app/"
+      "image": "ecom1",
+      "github": "https://github.com/MennaBashir/ITI-Project",
+      "demo": "https://iti-project-flame.vercel.app/"
     },
     {
       "title": "Arab Accountant Blog",
-      "description": "A website for Arab Accountant, a company specializing in accounting and financial services, site showcasing their services, a blog for news and articles, an about us section detailing company , and a testimonials section displaying customer reviews and feedback.",
+      "description": "A bilingual accounting knowledge hub with SEO-optimized articles, social sharing, and service pages for Arab accountants and finance professionals.",
       "category": "React/Next.js",
-      "tech": ["React", "Bootstrap", "SEO Optimization"],
+      "tech": [
+        "React",
+        "Bootstrap",
+        "SEO Optimization"
+      ],
       "featured": false,
       "status": "",
       "image": "account",
       "github": "https://github.com/MennaBashir/Arab_Accountant",
-      "demo": "https://arab-accountant.netlify.app/"
+      "demo": "https://arab-accountant.vercel.app/"
     },
     {
       "title": "Food Delivery",
-      "description": "A food delivery web application built with React and Tailwind CSS, designed to provide users with a seamless and engaging ordering experience.",
+      "description": "A food delivery web application built with React and Redux Toolkit, designed to provide users with a seamless and engaging ordering experience.",
       "category": "React/Next.js",
-      "tech": ["React", "JavaScript", "UI"],
+      "tech": [
+        "React",
+        "JavaScript",
+        "Redux Toolkit"
+      ],
       "featured": false,
       "status": "",
       "image": "food",
       "github": "https://github.com/MennaBashir/FoodDelivery",
-      "demo": "https://food-delivery-menna.netlify.app/"
-    },
-    {
-      "title": "Healthcare",
-      "description": "A healthcare web application built with React and Tailwind CSS, designed to provide users with a seamless and engaging experience for managing their health and wellness.",
-      "category": "React/Next.js",
-      "tech": ["React", "JavaScript", "UI"],
-      "featured": false,
-      "status": "",
-      "image": "hosipital",
-      "github": "https://github.com/MennaBashir/Hospital",
-      "demo": "https://clinic-menna.netlify.app/"
+      "demo": "https://food-delivery-iota-brown.vercel.app/"
     },
     {
       "title": "E-commerce",
-      "description": "An e-commerce web application built with React and Tailwind CSS, designed to provide users with a seamless and engaging shopping experience.",
+      "description": "An e-commerce web application built with React, Bootstrap and Redux Toolkit with persisted cart state, designed to provide users with a seamless and engaging shopping experience.",
       "category": "React/Next.js",
-      "tech": ["React", "JavaScript", "UI"],
+      "tech": [
+        "React",
+        "JavaScript",
+        "Bootstrap",
+        "Redux Toolkit"
+      ],
       "featured": false,
       "status": "",
       "image": "ecom2",
       "github": "https://github.com/MennaBashir/E-Commerce",
-      "demo": "https://ecommerce-menna.netlify.app/"
+      "demo": "https://e-commerce-omega-nine-95.vercel.app/"
     }
   ],
   "experiences": [
@@ -275,8 +381,8 @@
       "duration": "auto",
       "type": "Full-time",
       "description": [
-        "Collaborating with cross-functional teams to architect and develop a scalable, high-performance web application.",
-        "Participating in code reviews, agile ceremonies, and contributing to technical design discussions to continuously improve the codebase and development processes."
+        "Building an ERP system and internal dashboards that streamline day-to-day employee tasks and company operations, using React, ShadCN/UI, and React Query.",
+        "Contributing to code reviews, agile ceremonies, and technical design discussions to continuously improve code quality and development processes."
       ],
       "tech": [
         "React",
@@ -294,10 +400,15 @@
       "duration": "1 mo",
       "type": "Training Program",
       "description": [
-        "Collaborated with a team of interns to develop a responsive web application using React and Tailwind CSS, following agile methodologies ",
+        "Collaborated with a team of interns to develop a responsive web application using React, TypeScript, and Zustand, following agile methodologies.",
         "Implemented key features and UI components based on provided designs, while adhering to best practices and coding standards."
       ],
-      "tech": ["React", "TypeScript", "Zustand", "SASS"],
+      "tech": [
+        "React",
+        "TypeScript",
+        "Zustand",
+        "SASS"
+      ],
       "color": "violet"
     },
     {
@@ -310,7 +421,13 @@
         "Completed intensive training on frontend technologies including HTML5, CSS3, JavaScript ES6, and React.js.",
         "Gained a solid foundation in frontend development principles and best practices, preparing for real-world application development and collaboration."
       ],
-      "tech": ["React", "JavaScript", "Bootstrap", "HTML5", "CSS3"],
+      "tech": [
+        "React",
+        "JavaScript",
+        "Bootstrap",
+        "HTML5",
+        "CSS3"
+      ],
       "color": "emerald"
     },
     {
@@ -320,10 +437,16 @@
       "duration": "4 mo",
       "type": "Mentorship",
       "description": [
-        "Mentored by experienced developers, I gained hands-on experience in frontend development through real-world projects and code reviews.",
-        "Received personalized feedback and guidance that helped me refine my coding practices, problem-solving abilities, and understanding of software development workflows."
+        "Gained hands-on frontend experience through real-world projects and code reviews under the guidance of senior developers.",
+        "Received personalized feedback that sharpened my coding practices, problem-solving abilities, and understanding of software development workflows."
       ],
-      "tech": ["TypeScript", "React", "Problem Solving", "Git", "GitHub"],
+      "tech": [
+        "TypeScript",
+        "React",
+        "Problem Solving",
+        "Git",
+        "GitHub"
+      ],
       "color": "amber"
     }
   ],

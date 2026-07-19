@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import {
   motion,
   AnimatePresence,
@@ -171,13 +171,32 @@ function Dropdown({
   hasError?: boolean;
 }) {
   const [open, setOpen] = useState(false);
+  const rootRef = useRef<HTMLDivElement>(null);
   const selected = options.find((o) => o.label === value);
 
+  useEffect(() => {
+    if (!open) return;
+    const onPointerDown = (e: PointerEvent) => {
+      if (!rootRef.current?.contains(e.target as Node)) setOpen(false);
+    };
+    const onKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setOpen(false);
+    };
+    document.addEventListener("pointerdown", onPointerDown);
+    document.addEventListener("keydown", onKeyDown);
+    return () => {
+      document.removeEventListener("pointerdown", onPointerDown);
+      document.removeEventListener("keydown", onKeyDown);
+    };
+  }, [open]);
+
   return (
-    <div className="relative">
+    <div ref={rootRef} className="relative">
       <button
         type="button"
         onClick={() => setOpen((p) => !p)}
+        aria-haspopup="listbox"
+        aria-expanded={open}
         aria-invalid={hasError ? "true" : "false"}
         className="w-full flex items-center justify-between gap-2 px-4 py-3 rounded-xl border bg-zinc-900/80 text-sm text-slate-300 hover:border-blue-500/30 transition-all duration-300 focus:outline-none focus:border-blue-500/40"
         style={
@@ -378,13 +397,13 @@ export default function Contact() {
   };
 
   return (
-    <section className="relative pt-24  overflow-hidden">
+    <section className="relative py-24 overflow-hidden">
       <Toaster position="top-right" />
       <div className="relative z-10 max-w-6xl mx-auto px-6">
         <SectionHeading
           label="Reach Out"
           title="Let's Connect"
-          description="Whether it's a job opportunity, collaboration — my inbox is always open."
+          description="Whether it's a job opportunity or a collaboration — my inbox is always open."
         />
 
         <motion.div
@@ -402,14 +421,14 @@ export default function Contact() {
                   <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-400" />
                 </span>
                 <span className="text-sm font-semibold text-emerald-400">
-                  Available for Impact
+                  Available for Work
                 </span>
               </div>
               <p className="text-[15px] text-slate-300 font-medium mb-0.5">
                 Open to Roles & Collaboration
               </p>
               <p className="text-sm text-slate-500">
-                Focusing on React, Next.js, React Native.
+                Specializing in React, Next.js &amp; React Native.
               </p>
             </TiltCard>
 
@@ -547,7 +566,7 @@ export default function Contact() {
                       control={control}
                       render={({ field }) => (
                         <Dropdown
-                          label="My Service"
+                          label="Service Needed"
                           options={MY_SERVICES}
                           value={field.value}
                           onChange={field.onChange}

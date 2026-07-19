@@ -118,7 +118,7 @@ export default function TechStack() {
         <SectionHeading
           label="</> Skills & Technologies"
           title="Tech Stack"
-          description="A showcase of the technologies and tools I have experience with."
+          description="The technologies and tools I use to bring products to life."
         />
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 mb-20">
           {content.techGroups.map((group, i) => (

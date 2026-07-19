@@ -77,9 +77,9 @@ export default function Projects() {
         <SectionHeading
           label="Portfolio"
           title="Projects"
-          description="A selection of my recent work, showcasing a range of projects."
+          description="A selection of my recent work — from AI platforms to mobile apps."
         />
-        <div className="flex items-center justify-center gap-2 mb-10 -mt-6 border border-white/[0.05] bg-white/[0.02] backdrop-blur-xl rounded-3xl px-6 max-sm:px-3 py-2 w-fit mx-auto ">
+        <div className="flex flex-wrap items-center justify-center gap-2 mb-10 -mt-6 border border-white/[0.05] bg-white/[0.02] backdrop-blur-xl rounded-3xl px-6 max-sm:px-2 py-2 w-fit max-w-full mx-auto">
           {FILTERS.map((f) => (
             <button
               key={f}
@@ -151,13 +151,13 @@ export default function Projects() {
                   </div>
 
                   <div className="flex-1 p-5 flex flex-col">
-                    <div className="flex items-center justify-between mb-2">
-                      <h3 className="text-[15px] font-semibold text-slate-200 mb-1.5 group-hover:text-white transition-colors leading-snug">
+                    <div className="flex items-start justify-between gap-2 mb-2">
+                      <h3 className="text-[15px] font-semibold text-slate-200 mb-1.5 group-hover:text-white transition-colors leading-snug min-w-0">
                         {project.title}
                       </h3>
                       {status && (
                         <p
-                          className={`inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-semibold border backdrop-blur-sm ${
+                          className={`inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-semibold border backdrop-blur-sm whitespace-nowrap shrink-0 ${
                             status.pulse ? "animate-pulse-slow" : ""
                           }`}
                           style={{
@@ -166,7 +166,9 @@ export default function Projects() {
                             borderColor: status.borderColor,
                           }}
                         >
-                          <StatusIcon className="w-3 h-3" />
+                          <StatusIcon
+                            className={`w-3 h-3 ${status.pulse ? "animate-spin [animation-duration:2.5s]" : ""}`}
+                          />
                           {status.label}
                         </p>
                       )}

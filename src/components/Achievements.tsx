@@ -182,7 +182,7 @@ const achievements: Achievement[] = [
     title: "GitLab",
     tag: "Open Source Contributor",
     description:
-      "Sticky Edit button for wiki pages: Implemented a feature that keeps the 'Edit' button visible on GitLab wiki pages, improving accessibility and user experience.",
+      "Sticky Edit button for wiki pages: Implemented a feature that keeps the 'Edit' button visible while scrolling long GitLab wiki pages, improving accessibility and user experience.",
     techTags: ["Vue.js", "Accessibility", "UI/UX"],
     accentColor: "#f97316",
     status: { label: "Merged", color: "#a855f7" },
@@ -200,7 +200,7 @@ const achievements: Achievement[] = [
     title: "AboutCode",
     tag: "Open Source Contributor",
     description:
-      "Implemented Dark Mode for AboutCode website, enhancing user experience . The feature was merged in another PR and is now live, receiving positive feedback from the community.",
+      "Implemented Dark Mode for the AboutCode website, enhancing readability and user experience. The feature is now live and was well received by the community.",
     techTags: ["JavaScript",  "Dark Mode", "UI/UX"],
     accentColor: "#3b82f6",
     status: { label: "Merged", color: "#a855f7" },
@@ -226,7 +226,7 @@ export default function Achievements() {
         <SectionHeading
           label="Awards & Contributions"
           title="Key Achievements"
-          description="Awards and open-source contributions that shaped my journey."
+          description="Milestones and open-source work that shaped my journey."
         />
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -238,7 +238,7 @@ export default function Achievements() {
               viewport={{ once: true, margin: "-60px" }}
               transition={{ duration: 0.5, delay: i * 0.15 }}
               whileHover={{ y: -10 }}
-              className="group relative rounded-2xl border border-white/[0.06] bg-white/[0.02] backdrop-blur-xl p-8 flex flex-col overflow-hidden transition-shadow duration-500"
+              className="group relative rounded-2xl border border-white/[0.06] bg-white/[0.02] backdrop-blur-xl p-6 sm:p-8 flex flex-col overflow-hidden transition-shadow duration-500"
               style={{
                 boxShadow: `0 0 0 1px ${item.accentColor}30`,
               }}
@@ -259,9 +259,9 @@ export default function Achievements() {
               />
 
               <div className="relative flex flex-col flex-1">
-                <div className="flex items-start justify-between mb-6">
+                <div className="flex items-start justify-between gap-3 mb-6">
                   <div
-                    className="w-16 h-16 rounded-xl flex items-center justify-center border"
+                    className="w-16 h-16 shrink-0 rounded-xl flex items-center justify-center border"
                     style={{
                       backgroundColor: `${item.accentColor}08`,
                       borderColor: `${item.accentColor}20`,

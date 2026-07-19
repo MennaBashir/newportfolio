@@ -47,7 +47,7 @@ export default function Experience() {
         />
 
         <div className="relative">
-          <div className="absolute left-6 top-0 bottom-0 w-px bg-gradient-to-b from-sky-500/30 via-slate-700/50 to-transparent" />
+          <div className="absolute left-3 sm:left-6 top-0 bottom-0 w-px bg-gradient-to-b from-sky-500/30 via-slate-700/50 to-transparent" />
 
           <div className="space-y-8">
             {content.experiences.map((exp, i) => {
@@ -58,16 +58,16 @@ export default function Experience() {
                   initial={{ opacity: 0, x: -30 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.5, delay: i * 0.1 }}
-                  className="relative pl-16"
+                  className="relative pl-10 sm:pl-16"
                 >
                   <div
-                    className={`absolute left-4 top-6 w-5 h-5 rounded-full border-2 ${colors.border} ${colors.bg} flex items-center justify-center`}
+                    className={`absolute left-1 sm:left-4 top-6 w-5 h-5 rounded-full border-2 ${colors.border} ${colors.bg} flex items-center justify-center`}
                   >
                     <div className={`w-2 h-2 rounded-full ${colors.dot}`} />
                   </div>
 
                   <div
-                    className={`p-6 rounded-2xl border ${colors.border} ${colors.bg} border-l-4 ${colors.leftBorder} hover:bg-slate-900/60 transition-all duration-300`}
+                    className={`p-5 sm:p-6 rounded-2xl border ${colors.border} ${colors.bg} border-l-4 ${colors.leftBorder} hover:bg-slate-900/60 transition-all duration-300`}
                   >
                     <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 mb-4">
                       <div>

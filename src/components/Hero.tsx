@@ -2,8 +2,6 @@ import { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import { motion, useMotionValue, useSpring } from "framer-motion";
 import { ArrowRight } from "lucide-react";
-import { initParticlesEngine } from "@tsparticles/react";
-import { loadSlim } from "@tsparticles/slim";
 
 const spring = { type: "spring" as const, stiffness: 60, damping: 18 };
 
@@ -109,48 +107,58 @@ function OrbitalIcon({
   icon,
   mouseX,
   mouseY,
+  orbitScale,
 }: {
   icon: typeof SKILL_ICONS[0];
   mouseX: ReturnType<typeof useMotionValue<number>>;
   mouseY: ReturnType<typeof useMotionValue<number>>;
+  orbitScale: number;
 }) {
-  const [pos, setPos] = useState({ x: 0, y: 0, op: 0.65, sc: 0.88 });
+  const nodeRef = useRef<HTMLDivElement>(null);
+  const scaleRef = useRef(orbitScale);
+  scaleRef.current = orbitScale;
 
   useEffect(() => {
+    const reduceMotion = window.matchMedia(
+      "(prefers-reduced-motion: reduce)",
+    ).matches;
     const startRad = (icon.startAngle * Math.PI) / 180;
     const msPerRad = (icon.duration * 1000) / (2 * Math.PI);
     const start = performance.now();
     let raf: number;
     const tick = (now: number) => {
-      const a = startRad + (now - start) / msPerRad;
-      const mx = mouseX.get();
-      const my = mouseY.get();
-      const cx = Math.cos(a) * (icon.orbitRx + mx * 18) - icon.size / 2;
-      const cy = Math.sin(a) * (icon.orbitRy + my * 10) - icon.size / 2;
-      const z = Math.sin(a);
-      setPos({
-        x: cx,
-        y: cy,
-        op: 0.35 + ((z + 1) / 2) * 0.65,
-        sc: 0.7 + ((z + 1) / 2) * 0.38,
-      });
-      raf = requestAnimationFrame(tick);
+      const el = nodeRef.current;
+      if (el) {
+        const a = reduceMotion ? startRad : startRad + (now - start) / msPerRad;
+        const s = scaleRef.current;
+        const mx = mouseX.get();
+        const my = mouseY.get();
+        const cx =
+          Math.cos(a) * (icon.orbitRx * s + mx * 18) - icon.size / 2;
+        const cy =
+          Math.sin(a) * (icon.orbitRy * s + my * 10) - icon.size / 2;
+        const z = Math.sin(a);
+        const op = 0.35 + ((z + 1) / 2) * 0.65;
+        const sc = 0.7 + ((z + 1) / 2) * 0.38;
+        el.style.transform = `translate(${cx}px, ${cy}px) scale(${sc})`;
+        el.style.opacity = String(op);
+      }
+      if (!reduceMotion) raf = requestAnimationFrame(tick);
     };
     raf = requestAnimationFrame(tick);
     return () => cancelAnimationFrame(raf);
-  }, []);
+  }, [icon, mouseX, mouseY]);
 
   return (
     <div
+      ref={nodeRef}
       style={{
         position: "absolute",
         left: "50%",
         top: "50%",
-        transform: `translate(${pos.x}px, ${pos.y}px) scale(${pos.sc})`,
-        opacity: pos.op,
+        opacity: 0,
         width: icon.size,
         height: icon.size,
-        transition: "opacity 0.1s, transform 0.1s",
         willChange: "transform, opacity",
       }}
     >
@@ -178,12 +186,17 @@ function NeuralOrb() {
   const smoothX = useSpring(rawX, { stiffness: 55, damping: 20 });
   const smoothY = useSpring(rawY, { stiffness: 55, damping: 20 });
 
-  const [engineReady, setEngineReady] = useState(false);
+  const [orbitScale, setOrbitScale] = useState(1);
 
   useEffect(() => {
-    initParticlesEngine(async (e) => {
-      await loadSlim(e);
-    }).then(() => setEngineReady(true));
+    const el = wrapRef.current;
+    if (!el) return;
+    const observer = new ResizeObserver(([entry]) => {
+      const w = entry.contentRect.width;
+      setOrbitScale(Math.min(1, Math.max(0.5, w / 520)));
+    });
+    observer.observe(el);
+    return () => observer.disconnect();
   }, []);
 
   const handleMove = (e: React.MouseEvent) => {
@@ -221,7 +234,13 @@ function NeuralOrb() {
 
       <div className="absolute inset-0">
         {SKILL_ICONS.map((icon) => (
-          <OrbitalIcon key={icon.label} icon={icon} mouseX={smoothX} mouseY={smoothY} />
+          <OrbitalIcon
+            key={icon.label}
+            icon={icon}
+            mouseX={smoothX}
+            mouseY={smoothY}
+            orbitScale={orbitScale}
+          />
         ))}
       </div>
 
@@ -241,16 +260,16 @@ function NeuralOrb() {
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden">
-      <div className="relative z-10 max-w-7xl mx-auto px-6 w-full pt-20 lg:py-0 min-h-screen flex items-center">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center w-full">
+    <section className="relative min-h-[calc(100svh-4rem)] flex items-center overflow-hidden">
+      <div className="relative z-10 max-w-7xl mx-auto px-6 w-full py-16 lg:py-0">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-16 items-center w-full">
 
           <div className="flex flex-col">
             <motion.p
               {...fromBelow(0)}
               className="text-sm font-medium tracking-[0.2em] uppercase text-blue-400/80 mb-5"
             >
-              Welcome to my technical playground :)
+              Frontend &amp; Mobile Developer
             </motion.p>
 
             <motion.h1
@@ -275,10 +294,13 @@ export default function Hero() {
               {...fromBelow(0.2)}
               className="text-lg text-slate-400 leading-relaxed max-w-[520px] mb-3"
             >
-              Frontend &amp; Mobile Engineer Specializing in crafting seamless web and mobile applications. Passionate about exploring the latest in AI technology and frontend libraries to create innovative solutions. 
+              I build seamless, high-performance web and mobile experiences with React, Next.js &amp; React Native — blending clean code, thoughtful design, and the latest in AI to turn ideas into products people love.
             </motion.p>
 
-            <motion.div {...fromBelow(0.32)} className="mt-10 cursor-pointer">
+            <motion.div
+              {...fromBelow(0.32)}
+              className="mt-10 flex flex-wrap items-center gap-4"
+            >
               <motion.div whileHover={{ scale: 1.04 }} whileTap={{ scale: 0.97 }} className="inline-block">
                 <Link
                   to="/projects"
@@ -302,16 +324,17 @@ export default function Hero() {
                   <ArrowRight className="w-5 h-5" />
                 </Link>
               </motion.div>
+
             </motion.div>
 
             <motion.div
               {...fromBelow(0.45)}
-              className="flex items-center gap-6 mt-10 pt-8 border-t border-white/[0.05]"
+              className="flex flex-wrap items-center gap-x-8 gap-y-4 mt-10 pt-8 border-t border-white/[0.05]"
             >
               {[
                 { value: "2+", label: "Years Building" },
                 { value: "17+", label: "Projects Shipped" },
-                { value: "2", label: "OSS Orgs" },
+                { value: "2", label: "Open Source Orgs" },
               ].map((stat) => (
                 <div key={stat.label} className="flex flex-col">
                   <span
