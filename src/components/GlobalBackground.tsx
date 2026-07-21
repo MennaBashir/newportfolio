@@ -11,9 +11,15 @@ export default function GlobalBackground() {
   useEffect(() => {
     if (initialized.current) return;
     initialized.current = true;
-    initParticlesEngine(async (engine) => {
-      await loadSlim(engine);
-    }).then(() => setEngineReady(true));
+    const init = () =>
+      initParticlesEngine(async (engine) => {
+        await loadSlim(engine);
+      }).then(() => setEngineReady(true));
+    if ("requestIdleCallback" in window) {
+      requestIdleCallback(() => init(), { timeout: 2000 });
+    } else {
+      setTimeout(init, 200);
+    }
   }, []);
 
   const { scrollY } = useScroll();

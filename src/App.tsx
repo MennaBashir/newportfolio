@@ -11,14 +11,14 @@ import { ArrowLeft } from "lucide-react";
 import Navbar from "./components/Navbar";
 import GlobalBackground from "./components/GlobalBackground";
 import Hero from "./components/Hero";
-import TechStack from "./components/TechStack";
-import Projects from "./components/Projects";
-import Experience from "./components/Experience";
-import Achievements from "./components/Achievements";
-import Contact from "./components/Contact";
 import InteractiveCursor from "./components/InteractiveCursor";
 import { ContentProvider } from "./store/ContentStore";
 
+const TechStack = lazy(() => import("./components/TechStack"));
+const Projects = lazy(() => import("./components/Projects"));
+const Experience = lazy(() => import("./components/Experience"));
+const Achievements = lazy(() => import("./components/Achievements"));
+const Contact = lazy(() => import("./components/Contact"));
 const AdminPage = lazy(() => import("./admin/AdminPage"));
 
 const pageVariants = {
@@ -105,7 +105,8 @@ function AnimatedRoutes() {
 
   return (
     <AnimatePresence mode="wait">
-      <Routes location={location} key={location.pathname}>
+      <Suspense fallback={null}>
+        <Routes location={location} key={location.pathname}>
         <Route
           path="/"
           element={
@@ -158,9 +159,7 @@ function AnimatedRoutes() {
           path="/admin"
           element={
             <Page>
-              <Suspense fallback={null}>
-                <AdminPage />
-              </Suspense>
+              <AdminPage />
             </Page>
           }
         />
@@ -172,7 +171,8 @@ function AnimatedRoutes() {
             </Page>
           }
         />
-      </Routes>
+        </Routes>
+      </Suspense>
     </AnimatePresence>
   );
 }

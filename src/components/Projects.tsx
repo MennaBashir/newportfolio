@@ -146,6 +146,8 @@ export default function Projects() {
                       alt={project.title}
                       className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700"
                       loading="lazy"
+                      decoding="async"
+                      fetchPriority={i < 3 ? "high" : "low"}
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-zinc-950/70 via-transparent to-transparent" />
                   </div>

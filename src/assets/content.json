@@ -139,7 +139,7 @@
   ],
   "projects": [
     {
-      "title": "Sprintif AI",
+      "title": "SprintifAI",
       "description": "SprintifAI is an enterprise productivity platform that turns every meeting into measurable business outcomes. It captures discussions, extracts decisions, assigns tasks with deadlines, and syncs everything to your team's calendar.",
       "category": "React/Next.js",
       "tech": [
@@ -268,7 +268,7 @@
         "React Native",
         "Expo",
         "TypeScript",
-        "Tailwind CSS"
+        "NativeWind"
       ],
       "featured": false,
       "status": "",
@@ -327,21 +327,6 @@
       "demo": "https://iti-project-flame.vercel.app/"
     },
     {
-      "title": "Arab Accountant Blog",
-      "description": "A bilingual accounting knowledge hub with SEO-optimized articles, social sharing, and service pages for Arab accountants and finance professionals.",
-      "category": "React/Next.js",
-      "tech": [
-        "React",
-        "Bootstrap",
-        "SEO Optimization"
-      ],
-      "featured": false,
-      "status": "",
-      "image": "account",
-      "github": "https://github.com/MennaBashir/Arab_Accountant",
-      "demo": "https://arab-accountant.vercel.app/"
-    },
-    {
       "title": "Food Delivery",
       "description": "A food delivery web application built with React and Redux Toolkit, designed to provide users with a seamless and engaging ordering experience.",
       "category": "React/Next.js",
@@ -355,6 +340,21 @@
       "image": "food",
       "github": "https://github.com/MennaBashir/FoodDelivery",
       "demo": "https://food-delivery-iota-brown.vercel.app/"
+    },
+    {
+      "title": "Arab Accountant Blog",
+      "description": "A bilingual accounting knowledge hub with SEO-optimized articles, social sharing, and service pages for Arab accountants and finance professionals.",
+      "category": "React/Next.js",
+      "tech": [
+        "React",
+        "Bootstrap",
+        "SEO Optimization"
+      ],
+      "featured": false,
+      "status": "",
+      "image": "account",
+      "github": "https://github.com/MennaBashir/Arab_Accountant",
+      "demo": "https://arab-accountant.vercel.app/"
     },
     {
       "title": "E-commerce",
@@ -381,8 +381,8 @@
       "duration": "auto",
       "type": "Full-time",
       "description": [
-        "Building an ERP system and internal dashboards that streamline day-to-day employee tasks and company operations, using React, ShadCN/UI, and React Query.",
-        "Contributing to code reviews, agile ceremonies, and technical design discussions to continuously improve code quality and development processes."
+        "Engineered an ERP system and internal dashboards serving 300+ organizations using React, Shadcn/UI, and React Query, streamlining employee workflows and daily operations.",
+        "Designed and implemented reusable, accessible UI components and optimized data fetching with React Query, cutting redundant network requests and improving page performance platform-wide."
       ],
       "tech": [
         "React",
@@ -394,14 +394,13 @@
       "color": "sky"
     },
     {
-      "role": "Frontend Trainee",
+      "role": "Frontend Developer Intern",
       "company": "Huma-volve",
       "period": "Jun 2025 -- Jul 2025",
-      "duration": "1 mo",
-      "type": "Training Program",
+      "duration": "2 mo",
+      "type": "Internship",
       "description": [
-        "Collaborated with a team of interns to develop a responsive web application using React, TypeScript, and Zustand, following agile methodologies.",
-        "Implemented key features and UI components based on provided designs, while adhering to best practices and coding standards."
+        "Delivered features across multiple React applications within Agile sprints, collaborating with designers and developers to meet project deadlines."
       ],
       "tech": [
         "React",
@@ -412,21 +411,21 @@
       "color": "violet"
     },
     {
-      "role": "Frontend Trainee",
+      "role": "Frontend Developer Trainee",
       "company": "ITI -- Information Technology Institute",
       "period": "Sep 2024 -- Oct 2024",
       "duration": "2 mo",
       "type": "Training Program",
       "description": [
-        "Completed intensive training on frontend technologies including HTML5, CSS3, JavaScript ES6, and React.js.",
-        "Gained a solid foundation in frontend development principles and best practices, preparing for real-world application development and collaboration."
+        "Developed the product catalog, cart, and checkout flows for a collaborative e-commerce application using React, Material UI, and Redux Toolkit.",
+        "Architected global state management for cart and authentication with Redux Toolkit and integrated an interactive store-locator map with Leaflet."
       ],
       "tech": [
         "React",
-        "JavaScript",
-        "Bootstrap",
-        "HTML5",
-        "CSS3"
+        "Material UI",
+        "Redux Toolkit",
+        "Leaflet",
+        "JavaScript"
       ],
       "color": "emerald"
     },
@@ -437,8 +436,8 @@
       "duration": "4 mo",
       "type": "Mentorship",
       "description": [
-        "Gained hands-on frontend experience through real-world projects and code reviews under the guidance of senior developers.",
-        "Received personalized feedback that sharpened my coding practices, problem-solving abilities, and understanding of software development workflows."
+        "Implemented responsive UI features and resolved frontend defects across real-world React and JavaScript projects.",
+        "Strengthened problem-solving and project-structuring skills through hands-on work on production-style frontend tasks."
       ],
       "tech": [
         "TypeScript",

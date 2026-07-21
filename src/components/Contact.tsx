@@ -453,7 +453,7 @@ export default function Contact() {
             </TiltCard>
 
             <motion.a
-              href="https://wa.me/+201554619025"
+              href="https://wa.me/201554619025"
               target="_blank"
               rel="noreferrer"
               whileHover={{ scale: 1.02 }}

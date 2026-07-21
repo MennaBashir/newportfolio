@@ -1,18 +1,18 @@
-import account from "./images/account.png";
-import bosla from "./images/bosla.png";
-import dash from "./images/dash.png";
-import ecom1 from "./images/ecom1.png";
-import ecom2 from "./images/ecom2.png";
-import food from "./images/food.png";
-import free1 from "./images/free1.png";
-import free2 from "./images/free2.png";
-import port from "./images/port.png";
-import finto from "./images/finto-app.png";
-import sirx from "./images/sirx.png";
-import skyra from "./images/skyra.png";
-import elite from "./images/elite-app.png";
+import account from "./images/account.webp";
+import bosla from "./images/bosla.webp";
+import dash from "./images/dash.webp";
+import ecom1 from "./images/ecom1.webp";
+import ecom2 from "./images/ecom2.webp";
+import food from "./images/food.webp";
+import free1 from "./images/free1.webp";
+import free2 from "./images/free2.webp";
+import port from "./images/port.webp";
+import finto from "./images/finto-app.webp";
+import sirx from "./images/sirx.webp";
+import skyra from "./images/skyra.webp";
+import elite from "./images/elite-app.webp";
 import resume from "./images/Menna_Bashir_Frontend.pdf";
-import sprintifAi from "./images/sprintifAi.png";
+import sprintifAi from "./images/sprintifAi.webp";
 export const ASSETS = {
   account,
   bosla,
