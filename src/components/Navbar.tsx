@@ -76,7 +76,7 @@ export default function Navbar() {
             </span>
           </Link>
 
-          <div className="hidden lg:flex items-center gap-0.5 ml-auto mr-4 xl:mr-8">
+          <div className="flex max-lg:hidden items-center gap-0.5 ml-auto mr-4 xl:mr-8">
             {NAV_ITEMS.map((item) => {
               const isActive = pathname === item.path;
               const isHovered = hovered === item.path;
@@ -141,7 +141,7 @@ export default function Navbar() {
             <a
               href={ASSETS.resume}
               download
-              className="hidden lg:inline-flex items-center gap-2 px-5 py-2 text-[13px] font-medium tracking-wide text-sky-300 rounded-xl border border-sky-400/20 hover:border-sky-400/40 hover:text-white transition-all duration-400"
+              className="inline-flex max-lg:hidden items-center gap-2 px-5 py-2 text-[13px] font-medium tracking-wide text-sky-300 rounded-xl border border-sky-400/20 hover:border-sky-400/40 hover:text-white transition-all duration-400"
               style={{
                 background:
                   "linear-gradient(135deg, rgba(56,189,248,0.1) 0%, rgba(14,165,233,0.05) 100%)",
@@ -150,14 +150,14 @@ export default function Navbar() {
               }}
             >
               <Download className="w-3.5 h-3.5" />
-              <span className="hidden xl:inline">Download Resume</span>
-              <span className="xl:hidden">Resume</span>
+              <span className="inline max-xl:hidden">Download Resume</span>
+              <span className="max-xl:inline hidden">Resume</span>
             </a>
             <button
               onClick={() => setMobileOpen(!mobileOpen)}
               aria-label={mobileOpen ? "Close menu" : "Open menu"}
               aria-expanded={mobileOpen}
-              className="lg:hidden p-2 text-slate-400 hover:text-white transition-colors duration-200"
+              className="hidden  max-lg:!block p-2 text-slate-400 hover:text-white transition-colors duration-200"
             >
               {mobileOpen ? (
                 <X className="w-5 h-5" />
@@ -174,7 +174,7 @@ export default function Navbar() {
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: "auto" }}
               exit={{ opacity: 0, height: 0 }}
-              className="lg:hidden border-t border-white/[0.06] overflow-hidden"
+              className="max-lg:!block hidden border-t border-white/[0.06] overflow-hidden"
             >
               <div className="px-6 py-4 space-y-1 max-h-[calc(100vh-8rem)] overflow-y-auto">
                 {NAV_ITEMS.map((item) => (
