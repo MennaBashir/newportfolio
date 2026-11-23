@@ -176,25 +176,6 @@
       "demo": "https://front.bosla.almiraj.xyz/"
     },
     {
-      "title": "Jawamk",
-      "description": "Corporate website for Jawamk, a graphic design and digital marketing agency with offices across Saudi Arabia, UAE, Oman, and Egypt — featuring a bilingual (EN/AR) interface, project showcase, blog, and services pages.",
-      "category": "React/Next.js",
-      "tech": [
-        "Next.js",
-        "Shadcn/UI",
-        "Framer Motion",
-        "React Hook Form",
-        "Zod Validation",
-        "React Query",
-        "SEO Optimization"
-      ],
-      "featured": false,
-      "status": "freelance",
-      "image": "free2",
-      "github": "not available",
-      "demo": "https://jawamk.com/"
-    },
-    {
       "title": "Skyra",
       "description": "NASA Space Apps 2025 project — an AI-powered weather assistant that evaluates real-time NASA data to help users plan outdoor activities safely, with smart suggestions for better scheduling.",
       "category": "React/Next.js",
@@ -210,22 +191,6 @@
       "image": "skyra",
       "github": "https://github.com/Skyra-nasa/skyra",
       "demo": "https://skyra-iota.vercel.app/"
-    },
-    {
-      "title": "Mohdmimy",
-      "description": "A modern website for a graphic designer, showcasing his work and services, to easily display his portfolio and attract potential clients.",
-      "category": "React/Next.js",
-      "tech": [
-        "React",
-        "TypeScript",
-        "Tailwind CSS",
-        "SEO Optimization"
-      ],
-      "featured": false,
-      "status": "freelance",
-      "image": "free1",
-      "github": "not available",
-      "demo": "https://mohdmimy.com/"
     },
     {
       "title": "Admin Dashboard",
